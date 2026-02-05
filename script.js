@@ -4,7 +4,7 @@ var username;
 var localusername=localStorage.getItem("username");
 var localauthid=localStorage.getItem("authid");
 if(typeof localauthid==="undefined"||localauthid===null||localauthid==""){
-   // location.href="login";
+    location.href="login";
 }
 else{
     console.log("An Auth ID is present");
@@ -51,7 +51,7 @@ const create=()=>{
         return;
     }
     else{
-        Room(2);
+        Room(8);
         s.ref("rooms/"+roomt).once('value',function(snapshot) {
             if(snapshot.exists()){
                 alert("Error::ROOMCODEEXISTS");
@@ -105,5 +105,6 @@ function Room(length) {
     roomt += characters.charAt(Math.floor(Math.random() *
       charactersLength));
   }
+
 
 }
