@@ -1,0 +1,63 @@
+body{
+    /* background-image:#0F172A; */
+    background-color: #1E293B;
+    color:white;
+}
+.top-bar{
+    background-image:linear-gradient(90deg, #1CB5E0 0%, #000851 100%) ;
+    color:black;
+    border-radius:5px;
+    padding:10px 10px 10px 10px;
+    position:fixed;
+    top:0;
+    width:100%;
+    margin-left: 0%;
+    left: 0%;
+}
+.top-bar-btn{
+    position:fixed;
+    right:2px;
+    top:10px;
+    background-color:transparent;
+    border:none;
+    font-size:25px;
+    color:black;
+}
+.create-1{
+    background-image:linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    color:black;
+    position:absolute;
+    top:25%;
+    width:85%;
+    border-radius:5px;
+    padding:20px 20px 20px 20px;
+}
+input{
+    background-color: #292929;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 0px 10px 0px;
+}
+button{
+    /* background-image: linear-gradient(90deg, #d53369 0%, #daae51 100%); */
+    background-color:#38BDF8;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 0px 10px 0px;
+    font-weight: bold;
+}
+.past-chat{
+    position:absolute;
+    top:70%;
+    width:85%;
+    text-align: center;
+    background-color: #292929;
+    border-radius: 5px;
+    color: white;
+    padding: 20px 20px 20px 20px;
+    margin: 10px 0px 10px 0px;
+}

@@ -1,0 +1,97 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Welcome to the SeenZone </title>
+  <link href="favicon.jpg"rel="icon"/>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script> 
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+  <script>
+  var firebaseConfig = {
+  apiKey: "AIzaSyDvekSO0AspCgWZyIW4fPH68nlgC1vk5bU",
+  authDomain: "dr-bot-cvsd.firebaseapp.com",
+  databaseURL: "https://dr-bot-cvsd-default-rtdb.firebaseio.com",
+  projectId: "dr-bot-cvsd",
+  storageBucket: "dr-bot-cvsd.appspot.com",
+  messagingSenderId: "309042927466",
+  appId: "1:309042927466:web:add9de192718a550e43713"
+  };
+  firebase.initializeApp(firebaseConfig);
+</script>
+  </head>
+  <body>
+    <script src="script.js"></script>
+
+    <!--Div to show please wait while we js is searching for authcode and user details-->
+    <center id="wait-1">
+        <h1 style="padding-top:50%"><b>Control Uday, Control... aa raha hai data.</b></h1>
+    </center>
+    <!--Div for top bar with username-->
+    <div id="top-bar-1" class="top-bar" style="display:none">
+       <h2 id="uname">Welcome</h2>
+    </div>
+
+    <center><div id="create"class="create-1" style="display:none">
+      <h3 style="font-family:cursive">Welcome! What do you want to do?</h3>
+      <br>
+      <button id="join-btn" onclick="jwin()">Join Room</button>
+      <button id="create-btn" onclick="cwin()">Create Room</button>
+      <br>
+      <b>Made with ❤️ by Pushkar Sharma</b>
+    </div></center>
+
+
+
+
+    <!--Special Window for creating a chat-->
+
+    <center><div id="create-window"class="create-1" style="display:none">
+      <a href="">--Reset--</a>
+      <br>
+      <h3 style="font-family:cursive">You're creating a chat❌ creating a new story✅</h3>
+      <br>
+      <input type="text" id="room-name" placeholder="Room Name">
+      <input type="text" id="room-pass" placeholder="Set password">
+      <br>
+      <button id="main-create-btn" onclick="create()">Create Room</button>
+      <br>
+      <b>Made with ❤️ by Pushkar Sharma</b>
+    </div></center>
+
+
+
+
+
+    <!--Special window for joining a chat-->
+    <center><div id="join-window"class="create-1" style="display:none">
+      <a href="">--Reset--</a>
+      <br>
+      <h3 style="font-family:cursive">Enter that lucky chat code</h3>
+      <br>
+      <input type="text" id="roomid" placeholder="Chat Code">
+      <button id="join-btn" onclick="join()">Join Room</button>
+      <br>
+      <b>Made with ❤️ by Pushkar Sharma</b>
+    </div></center>
+
+    <div class="past-chat"id="past-chat" style="display:none">
+      <h3 style="font-family:cursive">Your Chats</h3>
+      <b id="chat-push">Looks like you have not tried our create chat feature!</b>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
