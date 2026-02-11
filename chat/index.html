@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script> 
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+  <script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyDNnZZ9rF6wy51XY18JByU1Q-NRvUYMW0s",
+    authDomain: "e-friend-tubb.firebaseapp.com",
+    databaseURL: "https://e-friend-tubb-default-rtdb.firebaseio.com",
+    projectId: "e-friend-tubb",
+    storageBucket: "e-friend-tubb.appspot.com",
+    messagingSenderId: "557155984116",
+    appId: "1:557155984116:web:2c19890af5d11d09e8b4a1"
+  };
+  firebase.initializeApp(firebaseConfig);
+</script>
+</head>
+<body>
+    <script src="script.js"></script>
+    <div style="position:fixed;top:10px;right:10px;">  <button onclick="share()">Copy share code</button></div>
+    <div class="top-bar">
+        <h2 id="chat-name"style="font-family:cursive;">Connecting...</h2>
+        <!-- <button class="theme-toggle" id="themeToggle">🌙</button> -->
+    </div>
+    <center><div class="loader"id="loader"></div></center>
+    
+    <div class="chat-div" id="chat-div"style="display:none">
+        <!-- <div id="chatContainer" class="chat-container">
+            <b>Sender's name</b>
+            <br>
+            <b>---Message---</b>
+        </div> -->
+    </div>
+
+    <div id="input-container"class="input-container"style="display:none">
+        <input type="text" maxlength="25"id="messageInput"style="width:75%" placeholder="Type your message...">
+        <button id="sendBtn"onclick="send()">Send</button>
+    </div>
+
+
+
+    <center><div class="roomauth" id="roomauth" style="display:none">
+        <h3>Everything looks good now eneter the passcode🔐</h3>
+        <br>
+        <input type="password" id="room-password-input" placeholder="Enter room password">
+        <button onclick="passwordcheck()">Start Chat</button>
+    </div></center>
+</body>
+</html>
