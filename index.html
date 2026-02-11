@@ -1,0 +1,93 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Welcome to ChatRooms by Pushkar </title>
+  <link href="favicon.png"rel="icon"/>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script> 
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+  <script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyDNnZZ9rF6wy51XY18JByU1Q-NRvUYMW0s",
+    authDomain: "e-friend-tubb.firebaseapp.com",
+    databaseURL: "https://e-friend-tubb-default-rtdb.firebaseio.com",
+    projectId: "e-friend-tubb",
+    storageBucket: "e-friend-tubb.appspot.com",
+    messagingSenderId: "557155984116",
+    appId: "1:557155984116:web:2c19890af5d11d09e8b4a1"
+  };
+  firebase.initializeApp(firebaseConfig);
+</script>
+  </head>
+  <body>
+    <script src="script.js"></script>
+
+    <!--Div to show please wait while we js is searching for authcode and user details-->
+    <center id="wait-1">
+        <h1 style="padding-top:50%"><b>Setting things up...</b></h1>
+    </center>
+    <!--Div for top bar with username-->
+    <div id="top-bar-1" class="top-bar" style="display:none">
+       <h2 id="uname">Welcome</h2>
+    </div>
+
+    <center><div id="create"class="create-1" style="display:none">
+      <h3 style="font-family:cursive">Welcome! What would you like to do?</h3>
+      <br>
+      <button id="join-btn" onclick="jwin()">Join Room</button>
+      <button id="create-btn" onclick="cwin()">Create Room</button>
+    </div></center>
+
+
+
+
+    <!--Special Window for creating a chat-->
+
+    <center><div id="create-window"class="create-1" style="display:none">
+      <a href="">--Reset--</a>
+      <br>
+      <img src="createimg.gif"width="60%"height="20%"style="border-radius:10px">
+      <br>
+      <input type="text" id="room-name" placeholder="Room Name">
+      <input type="text" id="room-pass" placeholder="Set password">
+      <br>
+      <button id="main-create-btn" onclick="create()">Create Room</button>
+      
+    </div></center>
+
+
+
+
+
+    <!--Special window for joining a chat-->
+    <center><div id="join-window"class="create-1" style="display:none">
+      <a href="">--Reset--</a>
+      <br>
+      <h3 style="font-family:cursive">Enter that lucky chat code</h3>
+      <br>
+      <input type="text" id="roomid" placeholder="Chat Code">
+      <button id="join-btn" onclick="join()">Join Room</button>
+      
+    </div></center>
+
+    <!-- <div class="past-chat"id="past-chat" style="display:none">
+      <h3 style="font-family:cursive">Your Chats</h3>
+      <b id="chat-push">Looks like you have not tried our create chat feature!</b>
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+
+<footer id="bottom-content"style="display:none;font-family:cursive;"><center><br><hr><b>Made with 💖 PUSHKAR SHARMA</b><br><button onclick="logout()">Logout</button></center></footer>
+    </body>
+</html>
