@@ -2,7 +2,6 @@ body{
     /* background-image:#0F172A; */
     background-color: black;
     color:white;
-    font-family: Sans-serif;
 }
 .top-bar{
     /* background-image:linear-gradient(90deg, #1CB5E0 0%, #000851 100%) ;
@@ -65,3 +64,4 @@ button{
     padding: 20px 20px 20px 20px;
 
 }
+
