@@ -50,15 +50,15 @@ const create=()=>{
     var pass=document.getElementById("room-pass").value;
     if(typeof name==="undefined"||name===null||name==""){
         alert("Please enter a valid room name");
-        return;
     }
     else{
         Room(8);
         s.ref("rooms/"+roomt).on('value',function(snapshot) {
             if(snapshot.exists()){
-                alert("Error::ROOMCODEEXISTS");
-                return;
-            }else{
+                alert("Room code generation failed!! Try Again");
+                
+            }
+            else{
                 s.ref("rooms/"+roomt).set({
                     name:name,
                     pass:pass,
@@ -118,3 +118,4 @@ function logout(){
     location.href="login";
 
 }
+
