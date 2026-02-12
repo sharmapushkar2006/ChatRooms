@@ -16,12 +16,13 @@ else{
             location.href="login";
         }
         else{
+            document.getElementById("uname").innerHTML=username;
             localStorage.setItem("username",username);
             document.getElementById("bottom-content").style.display="block";
             document.getElementById("wait-1").style.display="none";
             document.getElementById("top-bar-1").style.display="block";
             document.getElementById("create").style.display="block";
-            document.getElementById("past-chat").style.display="block";
+            //document.getElementById("past-chat").style.display="block";
             document.getElementById("uname").innerHTML=username;
         }
     },4000);
@@ -52,8 +53,8 @@ const create=()=>{
         return;
     }
     else{
-        Room(2);
-        s.ref("rooms/"+roomt).once('value',function(snapshot) {
+        Room(8);
+        s.ref("rooms/"+roomt).on('value',function(snapshot) {
             if(snapshot.exists()){
                 alert("Error::ROOMCODEEXISTS");
                 return;
@@ -62,8 +63,8 @@ const create=()=>{
                     name:name,
                     pass:pass,
                     creator:localusername,
-                    typing:e,
-                    public:private,
+                    typing:'yes',
+                    public:'private',
                     created:new Date()
                  });
                  setTimeout(function(){
@@ -115,4 +116,5 @@ function Room(length) {
 function logout(){
     localStorage.removeItem("authid");
     location.href="login";
+
 }
