@@ -53,7 +53,7 @@ const create=()=>{
     }
     else{
         Room(8);
-        s.ref("rooms/"+roomt).on('value',function(snapshot) {
+        s.ref("rooms/"+roomt).once('value').then(function(snapshot) {
             if(snapshot.exists()){
                 alert("Room code generation failed!! Try Again");
                 
@@ -62,7 +62,7 @@ const create=()=>{
                 s.ref("rooms/"+roomt).set({
                     name:name,
                     pass:pass,
-                    creator:localusername,
+                    creator:username,
                     typing:'yes',
                     public:'private',
                     created:new Date()
@@ -118,4 +118,5 @@ function logout(){
     location.href="login";
 
 }
+
 
