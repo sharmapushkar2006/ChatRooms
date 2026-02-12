@@ -4,7 +4,7 @@ const body = document.body;
 const barid=window.location.search;
 const roomid=barid.replace("?room=","");
 var chatcode,owner,typeper;
-var fetchusername
+var fetchusername,name
 var userverified=false;
 var typing=false;
 var chatroomvalid=false;
@@ -75,7 +75,8 @@ function checkroom(){
             document.getElementById("chat-name").innerHTML=snapshot.val().name;
             conct.ref("rooms/"+roomid).on('value',function(snapshot){
                 chatcode=snapshot.val().pass;
-                owner=snapshot.val().name;
+                name=snapshot.val().name;
+                owner=snapshot.val().creater;
                 typeper=snapshot.val().typing;
                 chatType=snapshot.val().public;
             })
