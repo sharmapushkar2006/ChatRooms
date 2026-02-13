@@ -132,7 +132,7 @@ const fetchmessages=()=>{
 
 
 function share() {
-  const copyText = "https://sharmapushkar2006.github.io/chat/?room="+roomid;
+  const copyText = "https://sharmapushkar2006.github.io/chatrooms/chat/?room="+roomid;
 
   navigator.clipboard.writeText(copyText).then(() => {
     alert("Link Copied to clipboard!");
