@@ -23,6 +23,17 @@
 </script>
   </head>
   <body>
+  <script type="text/javascript">
+    (function() {
+      // Mobile devices ke common keywords ka pattern
+      var isMobile = /iPhone|iPad|iPod|Android|BlackBerry|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
+
+      // Agar device mobile nahi hai, toh redirect karo
+      if (!isMobile) {
+          window.location.href = "about:blank";
+      }
+   })();
+</script>
     <script src="script.js"></script>
 
     <!--Div to show please wait while we js is searching for authcode and user details-->
@@ -90,4 +101,5 @@
 
 <footer id="bottom-content"style="display:none;font-family:cursive;"><center><br><hr><b>Made with 💖 PUSHKAR SHARMA</b><br><button onclick="logout()">Logout</button></center></footer>
     </body>
+
 </html>
