@@ -67,6 +67,10 @@ const create=()=>{
                     public:'private',
                     created:new Date()
                  });
+                s.ref("prevchat/"+username).push().set({
+                    'name':name,
+                    'code':roomt
+                })
                  setTimeout(function(){
                     location.href="chat?room="+roomt;
                 },4000);
@@ -118,5 +122,6 @@ function logout(){
     location.href="login";
 
 }
+
 
 
