@@ -38,15 +38,15 @@
 
     <!--Div to show please wait while we js is searching for authcode and user details-->
     <center id="wait-1">
-        <h1 style="padding-top:50%"><b>Setting things up...</b></h1>
+        <h1 style="padding-top:50%">Connecting...</h1>
     </center>
     <!--Div for top bar with username-->
     <div id="top-bar-1" class="top-bar" style="display:none">
-       <h2 id="uname">Welcome</h2>
+       <h2 id="uname">--Guest--</h2>
     </div>
 
     <center><div id="create"class="create-1" style="display:none">
-      <h3 style="font-family:cursive">Welcome! What would you like to do?</h3>
+      <h3 style="font-family:cursive">What's your plan for today ?</h3>
       <br>
       <button id="join-btn" onclick="jwin()">Join Room</button>
       <button id="create-btn" onclick="cwin()">Create Room</button>
@@ -60,7 +60,7 @@
     <center><div id="create-window"class="create-1" style="display:none">
       <a href="">--Reset--</a>
       <br>
-      <img src="createimg.gif"width="60%"height="20%"style="border-radius:10px">
+      <b>Give your chat a name and password :)</b>
       <br>
       <input type="text" id="room-name" placeholder="Room Name">
       <input type="text" id="room-pass" placeholder="Set password">
@@ -77,7 +77,7 @@
     <center><div id="join-window"class="create-1" style="display:none">
       <a href="">--Reset--</a>
       <br>
-      <h3 style="font-family:cursive">Enter that lucky chat code</h3>
+      <h3 style="font-family:cursive">Enter the code to join a Chat Room</h3>
       <br>
       <input type="text" id="roomid" placeholder="Chat Code">
       <button id="join-btn" onclick="join()">Join Room</button>
@@ -103,3 +103,4 @@
     </body>
 
 </html>
+
