@@ -76,7 +76,7 @@ function checkroom(){
             conct.ref("rooms/"+roomid).on('value',function(snapshot){
                 chatcode=snapshot.val().pass;
                 name=snapshot.val().name;
-                owner=snapshot.val().creater;
+                owner=snapshot.val().creator;
                 typeper=snapshot.val().typing;
                 chatType=snapshot.val().public;
             })
