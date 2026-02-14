@@ -45,7 +45,7 @@ const join=()=>{
 
 const create=()=>{
     document.getElementById("main-create-btn").disabled=true;
-    document.getElementById("main-create-btn").innerHTML="Server is creating your chat room... Please wait";
+    document.getElementById("main-create-btn").innerHTML="Creating...";
     var name=document.getElementById("room-name").value;
     var pass=document.getElementById("room-pass").value;
     if(typeof name==="undefined"||name===null||name==""){
@@ -122,6 +122,7 @@ function logout(){
     location.href="login";
 
 }
+
 
 
 
